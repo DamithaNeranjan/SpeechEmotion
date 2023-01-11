@@ -1,0 +1,5 @@
+Link : https://cloudconvert.com/mp3-to-wav
+
+Audio Codec : pcm_s16le
+Channels : mono
+Audio Bitrate : 256
