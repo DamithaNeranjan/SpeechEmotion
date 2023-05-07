@@ -37,7 +37,7 @@ emotions = {
 observed_emotions = ['calm', 'happy', 'fearful', 'neutral', 'surprised']
 
 
-# # Load the data and extract features for each sound file
+# Load the data and extract features for each sound file
 # def load_data(test_size=0.2):
 #     x, y = [], []
 #     for file in glob.glob(
