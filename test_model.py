@@ -94,7 +94,7 @@ filename = 'modelForPrediction1.sav'
 loaded_model = pickle.load(open(filename, 'rb'))  # loading the model file from the storage
 
 # Set the path to the folder containing the WAV files
-folder_path = "D:\\L4S1\\Research Project\\Final\\Candidate Videos\\6 Candidates Interview audio\\Candidate2\\Converted"
+folder_path = "D:\\L4S1\\Research Project\\Final\\Candidate Videos\\6 Candidates Interview audio\\Candidate6\\Converted"
 
 # Iterate over each file in the folder
 for file_name in os.listdir(folder_path):
@@ -130,8 +130,10 @@ for file_name in os.listdir(folder_path):
             print('neutral')
         elif prediction == 'sad':
             audioScore = audioScore + emotionWeightages['sad']
-        elif prediction == 'surprise':
+            print('sad')
+        elif prediction == 'surprised':
             audioScore = audioScore + emotionWeightages['surprise']
+            print('surprised')
 
         print(f"File: {file_name}, Prediction: {prediction}, Current Score: {audioScore}")
 
@@ -144,7 +146,7 @@ print(f"Calculated Final Score: {round(finalAudioScore, 2)}")
 # feature1 = extract_feature(
 #     # "D:\\L4S1\\Research Project\\Interim\\Video Sample\\DamithaAudio1.mp3",
 #     # "speech_audio/DamithaAudio1Mono.wav",
-#     "D:\\L4S1\\Research Project\\Final\\Candidate Videos\\6 Candidates Interview audio\\Candidate6\\Converted\\66.wav",
+#     "D:\\L4S1\\Research Project\\Final\\Candidate Videos\\6 Candidates Interview audio\\Candidate6\\Converted\\6.wav",
 #     # "speech_audio/Actor_01/03-01-01-01-01-01-01.wav",
 #     # "speech_audio/03-01-01-01-01-01-01.wav",
 #     mfcc=True, chroma=True, mel=True)
