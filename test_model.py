@@ -42,12 +42,12 @@ observed_emotions = ['angry',
                      'sad']
 
 emotionWeightages = {
-    "angry": 0.52,
-    "happy": 1.53,
-    "fearful": 0.77,
+    "angry": 0.55,
+    "happy": 1.58,
+    "fearful": 0.78,
     "neutral": 1,
-    "surprise": 0.62,
-    "sad": 0.43,
+    "surprise": 0.63,
+    "sad": 0.45,
 }
 
 audioScore = 0.0
@@ -94,7 +94,7 @@ filename = 'modelForPrediction1.sav'
 loaded_model = pickle.load(open(filename, 'rb'))  # loading the model file from the storage
 
 # Set the path to the folder containing the WAV files
-folder_path = "D:\\L4S1\\Research Project\\Final\\Candidate Videos\\6 Candidates Interview audio\\Candidate1\\Converted"
+folder_path = "D:\\L4S1\\Research Project\\Final\\Candidate Videos\\6 Candidates Interview audio\\Candidate2\\Converted"
 
 # Iterate over each file in the folder
 for file_name in os.listdir(folder_path):
@@ -133,7 +133,6 @@ for file_name in os.listdir(folder_path):
         elif prediction == 'surprise':
             audioScore = audioScore + emotionWeightages['surprise']
 
-        # Do something with the prediction
         print(f"File: {file_name}, Prediction: {prediction}, Current Score: {audioScore}")
 
 print(f"Before Final Score: {round(audioScore, 2)}")
